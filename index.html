@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexusTask | Smart Todo App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="header-content">
+                <h1 class="app-title">NexusTask</h1>
+                <p class="app-subtitle">Your smart productivity companion</p>
+            </div>
+            <div class="theme-toggle">
+                <i class="fas fa-moon" id="theme-icon"></i>
+            </div>
+        </header>
+
+        <main class="app-main">
+            <div class="task-input-container">
+                <input type="text" id="task-input" placeholder="Add a new task..." autocomplete="off">
+                <button id="add-task-btn">
+                    <i class="fas fa-plus"></i>
+                </button>
+                <div class="smart-suggestions"></div>
+            </div>
+
+            <div class="task-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="active">Active</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+                <button class="filter-btn" data-filter="priority">Priority</button>
+            </div>
+
+            <div class="task-stats">
+                <span id="tasks-remaining">0 tasks remaining</span>
+                <button id="clear-completed">Clear Completed</button>
+            </div>
+
+            <ul class="task-list" id="task-list">
+                <!-- Tasks will be added here dynamically -->
+            </ul>
+
+            <div class="empty-state" id="empty-state">
+                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik05IDVIN0M1Ljg5NSA1IDUgNS44OTUgNSA3djEyYzAgMS4xMDUuODk1IDIgMiAyaDEwYzEuMTA1IDAgMi0uODk1IDItMlY3YzAtMS4xMDUtLjg5NS0yLTItMmgtMiIgc3Ryb2tlPSJjdXJyZW50Q29sb3IiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48cGF0aCBkPSJNOSA1YTIgMiAwIDAgMSAyLTJoMmEyIDIgMCAwIDEgMiAydjJIOVY1WiIgc3Ryb2tlPSJjdXJyZW50Q29sb3IiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48cGF0aCBkPSJNMTIgMTB2NCIgc3Ryb2tlPSJjdXJyZW50Q29sb3IiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48cGF0aCBkPSJNMTAgMTJoNCIgc3Ryb2tlPSJjdXJyZW50Q29sb3IiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48L3N2Zz4=" alt="No tasks" class="empty-state-img">
+                <h3>No tasks yet</h3>
+                <p>Add your first task to get started</p>
+            </div>
+        </main>
+
+        <div class="smart-panel">
+            <div class="smart-panel-header">
+                <h4>Smart Suggestions</h4>
+                <i class="fas fa-robot"></i>
+            </div>
+            <div class="smart-panel-content" id="smart-suggestions">
+                <p>Start typing to get AI-powered suggestions</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
